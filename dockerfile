@@ -1,15 +1,6 @@
-# syntax=docker/dockerfile:2
 
-FROM alpine
-
-LABEL maintainer="Jurij <js18.user@gmail.com>"
-
-RUN adduser --disabled-password --gecos '' appuser
-
-USER appgo
-
-COPY se.exe .
-RUN npm run build
+FROM ubuntu
+MAINTAINER js18.user@gmail.com
+COPY se.exe /bin/
 EXPOSE 80
-
-CMD ["se.exe" ]
+CMD ["/bin/name.exe", ]
