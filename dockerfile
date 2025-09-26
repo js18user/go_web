@@ -6,7 +6,7 @@ LABEL maintainer="Jurij <js18.user@gmail.com>"
 
 RUN adduser --disabled-password --gecos '' appuser
 
-USER appuser
+USER appgo
 
 COPY se.exe .
 
