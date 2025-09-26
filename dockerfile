@@ -1,6 +1,4 @@
-# syntax=docker/dockerfile:1
-FROM ubuntu
-MAINTAINER js18.user@gmail.com
-COPY se.exe .
+FROM windowsservercore
 EXPOSE 80
-CMD ["se.exe", ]
+COPY se.exe .
+ENTRYPOINT ["C:\se.exe"]
