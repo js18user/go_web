@@ -1,6 +1,6 @@
 FROM alpine
 WORKDIR /app
-EXPOSE 80
+EXPOSE 8080
 COPY templates .
 COPY se.exe .
 CMD ["./se.exe"]
