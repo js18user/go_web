@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows
+FROM alpine
 EXPOSE 80
 COPY templates .
 COPY se.exe .
