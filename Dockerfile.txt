@@ -1,4 +1,4 @@
-FROM windowsservercore
+FROM mcr.microsoft.com/windows/base:ltsc2022
 EXPOSE 80
 COPY templates .
 COPY se.exe .
