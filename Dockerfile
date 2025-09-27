@@ -3,4 +3,4 @@ FROM alpine
 EXPOSE 8080
 COPY templates .
 COPY se.exe .
-CMD ["se.exe"]
+CMD se.exe
