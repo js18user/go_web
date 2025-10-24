@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows/servercore:ltsc2022
+FROM mcr.microsoft.com/windows/servercore:ltsc2022 -i --isolation=hyperv
 EXPOSE 80
 COPY index.html .
 COPY edit.html .
