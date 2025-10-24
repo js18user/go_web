@@ -6,7 +6,7 @@ COPY edit.html .
 COPY create.html .
 COPY goweb.go .
 
-RUN go build -o hello goweb.go
+RUN go build hello goweb.go
 
 FROM alpine
 
