@@ -1,4 +1,4 @@
-FROM golang:1.18-alpine
+FROM golang:1.23.6-alpine
 WORKDIR /app
 COPY index.html .
 COPY edit.html .
