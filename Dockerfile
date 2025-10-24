@@ -1,7 +1,7 @@
-FROM alpine
+FROM windowsservercore
 EXPOSE 80
 COPY index.html .
 COPY edit.html .
 COPY create.html .
-COPY goweb.exe .
-CMD ["goweb"]
+COPY goweb.exe C:\\app\\ .
+ENTRYPOINT ["C:\\app\\goweb.exe"]
