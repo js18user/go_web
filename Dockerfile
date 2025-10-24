@@ -1,4 +1,4 @@
-FROM windowsservercore
+FROM mcr.microsoft.com/windows/servercore:ltsc2025
 EXPOSE 80
 COPY index.html .
 COPY edit.html .
