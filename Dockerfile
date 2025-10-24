@@ -1,6 +1,7 @@
 FROM alpine
-# WORKDIR /app
-EXPOSE 8080
-COPY templates .
-COPY se.exe .
-CMD [se.exe]
+EXPOSE 80
+COPY index.html .
+COPY edit.html .
+COPY create.html .
+COPY goweb.exe .
+CMD [goweb.exe]
