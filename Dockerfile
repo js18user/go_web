@@ -1,7 +1,9 @@
-FROM mcr.microsoft.com/windows/servercore:ltsc2022
-EXPOSE 80
+FROM golang:1.18-alpine
+WORKDIR /app
 COPY index.html .
 COPY edit.html .
 COPY create.html .
-COPY goweb.exe C:\\app\\ .
-ENTRYPOINT ["C:\\app\\goweb.exe"]
+COPY goweb.go .
+RUN go build -o goweb.go
+EXPOSE 80
+CMD ["./goweb"]
