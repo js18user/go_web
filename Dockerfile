@@ -1,27 +1,17 @@
-FROM golang:1.23.6-alpine
-WORKDIR /app
+FROM golang:alpine AS builder
+WORKDIR /build
+ADD go.mod .
 COPY index.html .
 COPY edit.html .
 COPY create.html .
 COPY goweb.go .
-RUN go build -c goweb.go
-EXPOSE 80
-CMD ["./goweb"]
 
-FROM golang:alpine AS builder
-
-WORKDIR /build
-
-ADD go.mod .
-
-COPY . .
-
-RUN go build -o hello hello.go
+RUN go build -o hello goweb.go
 
 FROM alpine
 
 WORKDIR /build
 
-COPY --from=builder /build/hello /build/hello
+COPY --from=builder /build/goweb /build/goweb
 
 CMD [". /hello"]
