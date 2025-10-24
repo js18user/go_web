@@ -4,4 +4,4 @@ COPY index.html .
 COPY edit.html .
 COPY create.html .
 COPY goweb.exe .
-CMD ["goweb.exe"]
+CMD ["goweb"]
