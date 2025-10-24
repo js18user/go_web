@@ -15,5 +15,5 @@ FROM alpine
 WORKDIR /build
 
 COPY --from=builder /build/goweb /build/goweb
-
+EXPOSE 80
 CMD [". /hello"]
