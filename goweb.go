@@ -115,8 +115,8 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     // conn := "postgresql://postgres:aa4401@localhost:5432/fintech"
-    // conn := "postgresql://gen_user:K5m_5u5tAB0%26lp@85.193.90.169:5432/default_db"
-    conn := "postgresql://neondb_owner:npg_GoPNxHe0pzm4@ep-rapid-glitter-a9y5kqy5-pooler.gwc.azure.neon.tech/neondb?sslmode=require"
+    conn := "postgresql://gen_user:K5m_5u5tAB0%26lp@85.193.90.169:5432/default_db"
+    // conn := "postgresql://neondb_owner:npg_GoPNxHe0pzm4@ep-rapid-glitter-a9y5kqy5-pooler.gwc.azure.neon.tech/neondb?sslmode=require"
 
     db, err := sql.Open("postgres", conn)
     if err != nil {
@@ -139,4 +139,5 @@ func main() {
     http.Handle("/",router)
     fmt.Println("Server is listening...")
     http.ListenAndServe(":80", nil)
+
 }
